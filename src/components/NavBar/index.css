@@ -1,0 +1,45 @@
+.logo-name {
+  font-family: roboto;
+  font-size: 20px;
+}
+.logo-img {
+  height: 30px;
+  width: 30px;
+}
+.logo-bg-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.score-bg-container {
+  display: flex;
+  flex-direction: row;
+}
+.navbar-bg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: lightskyblue;
+}
+.logo-name {
+  color: white;
+}
+.score {
+  color: white;
+  margin-right: 20px;
+}
+.top-scoer {
+  color: green;
+}
+@media (max-width: 500px) {
+  .logo-name {
+    font-size: 12px;
+  }
+  .logo-img {
+    height: 20px;
+    width: 20px;
+  }
+  .score {
+    font-size: 12px;
+  }
+}

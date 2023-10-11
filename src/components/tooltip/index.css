@@ -37,6 +37,7 @@
   .button-trigger{
     border:1px solid #f1c2d7;
     padding:10px;
+    font-weight: bold;
     background-color: transparent;
     border-radius: 5px;
   }

@@ -5,7 +5,7 @@ import "./index.css"
 export const ToolTipPositions=() =>{
   return(
   <Popup
-    trigger={<button className="button-trigger"> Open Modal </button>}
+    trigger={<button className="button-trigger">Rules </button>}
     modal
     nested
   >
@@ -17,8 +17,8 @@ export const ToolTipPositions=() =>{
         <div className="header"> Constraints </div>
         <div className="content">
         <ul className='content'>
-          <li>There will be 12 emoji cards , click on each emoji</li>
-          <li>If you click any emoji twise will LOOSE</li>
+          <li>There will be 12 emoji cards , click on each emoji😃</li>
+          <li>If you click any emoji twice will LOOSE</li>
           <li>If you click all emojis without repeatation you will WIN</li>
         </ul>
         </div>

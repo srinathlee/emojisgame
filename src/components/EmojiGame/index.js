@@ -26,13 +26,22 @@ class EmojiGame extends Component {
       isgameCompleted = 0
       totalScore = score
       score = 0
-    } else {
+     } 
+    
+    else {
       score += 1
       cardsClicked.push(id)
+       if(score===12){
+        isgameCompleted = 0
+        totalScore = score
+        score = 0
+       }
     }
     this.setState({score, maxscore, isgameCompleted, totalScore})
-    console.log(score, maxscore)
+    // console.log(score,maxscore)
+    
   }
+
 
   playAgain = () => {
     this.setState({cardsClicked: []})
@@ -43,8 +52,7 @@ class EmojiGame extends Component {
     const {emojisList} = this.props
     const {score, maxscore, isgameCompleted, totalScore} = this.state
     const emojis = emojisList.sort((a, b) => 0.5 - Math.random())
-    const totalscore = score
-    console.log(totalscore)
+     console.log(score)
     return (
       <div className="main-bg-container">
         <Navbar scores={{score, maxscore}} />
@@ -62,7 +70,7 @@ class EmojiGame extends Component {
             <div className="win-loose-bg-container">
               <div className="result-text-bg-container">
                 <h1 className="result-heading">
-                  {maxscore === 12 ? 'You won' : 'You Lose'}
+                  {totalScore === 12 ? 'You won' : 'You Lose'}
                 </h1>
                 <p className="result-score-heading">Score</p>
                 <p className="result-score">{totalScore}/12</p>
@@ -70,7 +78,7 @@ class EmojiGame extends Component {
                   Play Again
                 </button>
               </div>
-              {maxscore === 12 ? (
+              {totalScore === 12 ? (
                 <img
                   className="img"
                   src="https://assets.ccbp.in/frontend/react-js/won-game-img.png"
